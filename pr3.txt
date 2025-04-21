@@ -1,0 +1,9 @@
+> Practical 3
+>go to the services >Databses expand >JavaDB rightclick >startserver>expand JavaDB>select the Databse>right click connect
+>go to the jdbc:/derby >Tables > create Tables
+>after creating the tables >create a new project 
+>go to projects >rightclick on the projectname >new>select Entity class
+>in the Entity class >give the tabel name >pakage name as com.play.
+>now go to the jsp pages form ectity class> add all >next> seseion been pakage .a Jsf class package .b  jsp page folder c>next > finish
+>go to Restful web services from entity classes> Add all>next >resource pakage p.service
+>now save >deploy > and run the whole project

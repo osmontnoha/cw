@@ -1,0 +1,32 @@
+Pract 1 
+> Create a new project 
+>right click on the project name and select jsp 
+>create two jsp files name input and output
+> Crete a web service
+>name it accordingly and wirte server in the package name
+>go to the web service code and delete the hello world code 
+>then right click on the it and select insert code and add a new web service operation 
+>give the operation name and click on the add button 
+>give the parameter name as (eg:a) then select the type
+>make the following changes :
+    in the return line add the formula you want to add 
+	return "The indian rupees "+a+"in dollars is "+(a/83.17); like this 
+>go to the input.jsp file and make a form there 
+ <form action="output.jsp">            
+            <pre>
+Enter the currency in rupees :<input type="text" name="t1">
+<input type="submit"> <input type="reset">
+            </pre>
+        </form>
+>right click on the project name >new >web service client> click on the browse button >from various project name > select the created web service  
+>in the output.jsp page drag and drop the operation in the file body and make the following changes
+double a = Double.parseDouble(request.getParameter("t1"));
+>save and deploy the project 
+python code 
+from zeep import Client
+wsdl_url='http://localhost:8080/Pract1/Currency?WSDL'
+client=Client(wsdl_url)
+#call the method on the webservice
+a=float(input("Enter currency in rupees :"))
+result = client.service.Inrtodollar(a)
+print(result)
